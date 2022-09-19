@@ -26,6 +26,11 @@ $ docker-compose exec fast_api poetry run python -m api.migrate_db
 ```
 
 3. http://localhost:8000/docs にアクセスする。
+4. 自動テストを実行するには以下のコマンドを実行。
+
+```
+$ docker-compose run --entrypoint "poetry run pytest --asyncio-mode=auto" api
+```
 
 ## 参考文献
 - [FastAPI入門](https://zenn.dev/sh0nk/books/537bb028709ab9)
